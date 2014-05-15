@@ -1,0 +1,4 @@
+[14-Jul-2013 20:32:25 UTC] PDb_List::initialize list query= SELECT * FROM wp_products_database WHERE `display_category` LIKE "%Accessories%" AND  `id` != 1325 ORDER BY `id` ASC
+[14-Jul-2013 20:33:01 UTC] PDb_List::initialize list query= SELECT * FROM wp_products_database WHERE `display_category` LIKE "%Accessories%" AND  `id` != 1325 ORDER BY `id` ASC
+[14-Jul-2013 20:33:05 UTC] PDb_List::initialize list query= SELECT * FROM wp_products_database WHERE `display_category` LIKE "%Accessories%" AND  `id` != 1325 ORDER BY `id` ASC
+[14-Jul-2013 20:38:59 UTC] PDb_List::initialize list query= SELECT * FROM wp_products_database WHERE `designer` LIKE "%Ascalon%" AND  `id` != 1325 ORDER BY `date_updated` DESC

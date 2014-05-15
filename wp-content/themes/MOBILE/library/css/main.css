@@ -1,0 +1,510 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+@font-face {
+    font-family: 'dinmittelschriftregular';
+    src: url('fonts/dinmittelschrift-regular.ttf-webfont.eot');
+    src: url('fonts/dinmittelschrift-regular.ttf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.woff') format('woff'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.ttf') format('truetype'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.svg#dinmittelschriftregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Global 
+----------------------------------------------------------------------- */
+    
+body { background: url("../images/layout/default.jpg") no-repeat scroll left top transparent; font-family: "dinmittelschriftregular"; text-transform: uppercase;}
+body.parent-pageid-6, body.blog, body.single, body.category { background-repeat: repeat-y; background-image: url("../images/layout/body-2.jpg"); }
+body.blog, body.category { background-image: url('../images/layout/agenda-bg.png'); }
+
+
+#container { min-height: 460px; width: 320px;  }
+#container a { color: #000000; text-decoration: none; }
+#container .current-menu-item a { text-decoration: underline; }
+#container .current-menu-item li a { text-decoration: none; }
+
+.main {min-height: 480px; }
+
+.parent-pageid-6 .main { min-height: 470px; }
+
+h1 { font-size: 36px; margin: 0; text-decoration: underline; }
+
+header { height: 78px; overflow: hidden; width: 320px; }
+header .arrow { float: left; height:100%; width: 80px; }
+header .arrow a, header .arrow button { background: url("../images/layout/sprites-arrow.png") no-repeat scroll 0 0 transparent; display: block; height:100%;}
+header .back a, header .back button { background-position: 16px -36px; }
+header .forward a, header .forward button { background-position: -66px 27px; }
+header .logo { float: left;}
+header .bars { background: url("../images/layout/bars.png") no-repeat scroll left top transparent; float: right; height: 79px; width: 79px;}
+
+.menu { font-size: 36px; line-height: 1.3; list-style: none; margin: 37px 0 0 80px; padding: 0 0 0 0;}
+
+
+.main .menu { margin: 0; }
+.main .menu a { font-size: 21px; margin: 0; }
+.main .menu li {line-height: 30px;}
+.main .menu .sub-menu {  display: none; list-style: none; margin: 0; padding: 0; }
+.main .menu .current-menu-item .sub-menu, .main .menu .current-menu-parent .sub-menu {  display: block; }
+.main .menu .sub-menu li { line-height: 16px; }
+.main .menu .sub-menu li a { font-size: 18px; }
+.main .agenda-top { padding: 20px 0 0 80px; }
+.main .agenda-top h1 { font-size: 35px;font-weight: lighter; letter-spacing: -2px;line-height: 45px; }
+/* end Global */
+
+/* Forms */
+input[type=text]:focus,textarea:focus {color: #373737;}
+input[type=text] {  padding: 3px;}
+input#s {background: url(images/search.png) no-repeat 5px 6px;-moz-border-radius: 2px;border-radius: 2px;font-size: 14px;height: 22px;line-height: 1.2em;padding: 4px 10px 4px 28px;}
+input#searchsubmit {display: none;}
+input[type=text],
+input[type=password],
+textarea {background: #fafafa;-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);border: 0;color: #888;}
+textarea {padding-left: 3px;width: 98%;}
+/* end Forms*/
+
+
+
+/* Home page 
+----------------------------------------------------------------------- */
+.home #container { min-height: 550px;}
+.home .arrow { visibility: hidden; }
+/* end Home page */
+
+
+
+
+/* Agenda - Mission page 
+----------------------------------------------------------------------- */
+/* Preload all the background images*/
+#preloader {
+  background: url("../images/layout/sprites/mission-sprite-1.png") no-repeat fixed -9999px -9999px;
+  background: url("../images/layout/sprites/mission-sprite-2.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-sprite-3.png") no-repeat fixed -9999px -9999px,
+  }
+
+/* Required Slider styles */
+.iosSlider { position: relative;top: 0;left: 0;overflow: visible;width: 320px; height: 470px;}
+.iosSlider .slider {width: 100%;height: 100%;}
+.iosSlider .slider .slide {float: left;width: 320px; height: 470px;}
+
+/*Assign proper image sprite file for each slide*/
+.slide.item-2, .slide.item-3, .slide.item-4 { background-image: url("../images/layout/sprites/mission-sprite-1.png"); }
+.slide.item-5, .slide.item-6, .slide.item-7 { background-image: url("../images/layout/sprites/mission-sprite-2.png"); }
+.slide.item-8, .slide.item-9, .slide.item-11 { background-image: url("../images/layout/sprites/mission-sprite-3.png"); }
+
+/* setting up bg position */
+.slide.item-1, .slide.item-10 { background: url("../images/layout/agenda-block.png") repeat-x fixed 0 0 transparent; }
+.slide.item-2, .slide.item-5, .slide.item-8  { background-position: 0 0; }
+.slide.item-3, .slide.item-6, .slide.item-9  { background-position: 640px 0;}
+.slide.item-4, .slide.item-7, .slide.item-11 { background-position: 320px 0;}
+
+/*specific slide padding*/
+.slide.item-5 {padding: 19px 0 0 0;}
+.slide.item-6 {padding: 32px 0 0 0;}
+.slide.item-8 {padding: 47px 0 0 0;}
+.slide.item-8 {padding: 48px 0 0 0;}
+.slide.item-9 {padding: 25px 0 0 0;}
+
+/*individual slide content preferences */
+.slide.item-1 p { font-size: 21px; padding: 0 33px; text-align: justify; }
+.slide.item-2 p { color: #FFF; font-size: 21px; padding: 0 38px; position: absolute; }
+.slide.item-3 p { color: #FFFFFF;font-size: 15px;padding: 21px 28px 0;text-align: justify; }
+.slide.item-4 p { color: #FFFFFF;font-size: 22px;margin: 94px 0 0;text-align: center; }
+.slide.item-5 p { font-family: Verdana; font-size: 14px; margin: 6px 0 0 0; line-height: 24px; padding: 0 20px;text-align: justify;text-transform: none;}
+.slide.item-6 p { font-family: Verdana; font-size: 15px; line-height: 20px;margin: 5px 0 0 0;padding: 0 20px;text-align: justify;text-transform: none;}
+.slide.item-6 p span { font-size: 23px; text-transform: uppercase;}
+.slide.item-7 p { color: #FFF;font-size: 20px;line-height: 38px;padding: 0 20px;text-align: justify;}
+.slide.item-8 p { font-size: 15px;margin-bottom: 44px;text-align: center;}
+.slide.item-8 p { font-size: 14px;margin-bottom: 47px;text-align: center;}
+.slide.item-9 p { font-family: Arial;font-size: 14px;padding: 0 19px;text-align: justify;text-transform: none;}
+.slide.item-9 p span { font-family: "dinmittelschriftregular";font-size: 13px;font-weight: 700;text-transform: uppercase;}
+/* end Agenda - Mission page */
+
+
+/* Agenda - News page 
+----------------------------------------------------------------------- */
+.news { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent; }
+.news ul {margin: 0; }
+.news .widget_vr { margin: 0 31px 0 80px;}
+.news .widget_vr .widget-title { font-size: 15px;font-weight: normal; margin: 34px 0 0 0;}
+.news .widget_vr .vr_wrapper { position: relative; }
+.news .widget_vr #email_address { font-size: 10px!important; padding: 4px 38px 4px 3px!important; text-indent: 5px; width: 80%!important; }
+.news .widget_vr #vr_submit { display: inline-block;  font-size: 8px!important; font-weight: bold!important; height: 21px; margin: 0!important; position: absolute; right: 0; width: 42px!important; }
+
+.news .content {margin: 16px 60px 0 80px;}
+.news .press-items { list-style: none; margin: 0; padding: 0; text-transform: none; }
+.news .press-items a { font-family: Verdana; font-size: 13px; }
+.news .press-items li { line-height: 15px;padding: 0 0 16px 0;}
+.news .slider .slide { height: auto; }
+
+.single .news { background-image: none;background-color: #FFFFFF; height: auto;}
+
+.single .news .gallery { overflow: hidden; text-align: center; }
+.single .news .gallery br { display: none; visibility: hidden; }
+.single .news .gallery .gallery-item { float: left; margin: 0; }
+
+.single .news h1 { font-size: 16px;font-weight: normal;margin: 35px 0 0;padding: 0 30px;text-decoration: none;}
+.single .news img { height: auto; display: block; margin: auto; max-width: 100%;}
+.single .news p{ font-family: Verdana;font-size: 14px;line-height: 25px;margin: 0;text-align: justify;text-transform: none;}
+.single .news a{ font-family: "dinmittelschriftregular";}
+.single .news .entry-content { padding: 0 30px; }
+.single .news .entry-content .gallery{display: none; visibility: hidden;}
+.single .news .entry-content iframe:not(.twitter-share-button){height: auto; width: 100%;}
+
+/*.single .news .iosSlider { height: 100%;}*/
+/* end Agenda - News page */
+
+
+/* About page 
+----------------------------------------------------------------------- */
+.page-id-15, .parent-pageid-15, body.page-id-40 { background-image: url("../images/layout/body-3.jpg"); }
+.page-id-15 .agenda-top, .parent-pageid-15 .agenda-top { background: url("../images/layout/agenda-block.png") repeat-x scroll 0 0 transparent; padding-bottom: 20px;}
+.page-id-15 .gallery-size-iphone-about-thumbnail, .parent-pageid-15 .gallery-size-iphone-about-thumbnail { background-color: #FFFFFF; padding: 0 0 0 40px; }
+.page-id-15 .gallery-size-iphone-about-thumbnail .gallery-item, .parent-pageid-15 .gallery-size-iphone-about-thumbnail .gallery-item {float: left;margin: 0;}
+.page-id-15 .content, .parent-pageid-15 .content {background-color: #FFFFFF; padding: 20px 0 20px 80px;}
+.page-id-15 .content p span { font-family: "dinmittelschriftregular"; font-size: 15px;}
+/*.page-id-15 .content p:first-child,.page-id-15 .content p:first-child + p {display: block;}*/
+.page-id-15 .content p:first-child,.page-id-15 .content p{display: block;}
+/*.page-id-15 .content p:first-child + p {font-family: Verdana; font-size: 11px; line-height: 23px; text-transform: none;}*/
+.page-id-15 .content p {font-family: Verdana; font-size: 11px; line-height: 23px; text-transform: none;}
+.page-id-15 .content .gallery, .parent-pageid-15 .content .gallery{display: none; visibility: hidden;}
+.page-id-15 .content .show-on-iphone { overflow: hidden; }
+.page-id-15 .content .social-links { background: url("../images/layout/sprites/icon-sprite.png") no-repeat scroll 0 0 transparent; float: left; height: 25px; margin: 8px 10px 0 0; width: 23px;}
+.page-id-15 .content .fb { height: 22px; width: 12px; }
+.page-id-15 .content .tw { background-position: -82px 0; }
+.page-id-15 .content .pn { background-position: -22px 0; }
+.page-id-15 .content .ig { background-position: -52px 0; }
+/* end About page */
+
+.parent-pageid-15 h3 {font-size: 15px;}
+.parent-pageid-15 .content {font-family: Verdana; font-size: 11px; line-height: 23px; text-transform: none;}
+.parent-pageid-15 .content #theteam {font-weight: bold;  padding: 10px 0;}
+
+
+/* Craft page 
+----------------------------------------------------------------------- */
+.page-id-22 { background-image: url("../images/layout/body-5.png"); }
+.page-id-22 .craft { padding: 20px 35px 10px 80px;text-align: justify; }
+.page-id-22 h3 { font-size: 15px; font-weight: normal; text-align: left; }
+.page-id-22 p { font-size: 14px; text-transform: none; }
+/* end Craft page*/
+
+
+
+/* Products page 
+----------------------------------------------------------------------- */
+.page-id-8, .parent-pageid-8, .parent-pageid-353, .parent-pageid-56, .parent-pageid-60, body.page-id-415 { background-image: url("../images/layout/body-4.jpg"); }
+
+.product { background: url("../images/layout/agenda-block.png") repeat-x fixed 0 0 transparent; }
+.product .agenda-top { margin-bottom: 40px; }
+/*.product .content { margin: 40px 0 0 0; }*/
+.product .gallery { overflow: hidden; }
+.product .gallery-item { background-color: #FFFFFF; float: left;margin: 0; }
+.product .gallery .gallery-item .attachment-iphone-thumbnail,
+.product .gallery-item .attachment-medium { opacity: 0.4; -webkit-transition: opacity .2s linear; }
+
+.product .gallery .gallery-item .attachment-iphone-thumbnail:hover,
+.product .gallery .gallery-item .attachment-iphone-thumbnail:active,
+.product .gallery-item .attachment-medium:hover,
+.product .gallery-item .attachment-medium:active { opacity: 1.0; -webkit-transition: opacity .2s linear; }
+ 
+.product .pagination { }
+.product .pagination label { display: none; }
+.product .pagination ul { list-style: none; }
+.product .pagination .nextpage a { background-image:url('/wp-content/themes/THENWBLK/images/black_arrow_right.png'); width:61px;height:40px;float:right; }
+.product .pagination .prevpage a { background-image:url('/wp-content/themes/THENWBLK/images/black_arrow_left.png'); width:61px;height:40px;float:left; }
+.product br {display: none;}
+
+.product-page { background-color: #FFFFFF; }
+.product-page .PDb-single{ padding: 20px; }
+
+.product-content #prevProduct, .product-content #nextProduct { display: none; visibility: hidden; }
+
+#galleria img, .PDb-single .display_category, .PDb-single .options,  .PDb-single .lead_time { display: none; visibility: none; }
+
+#galleria img:first-child {display: block; width: 100%!important; }
+
+.PDb-single .product-list { list-style: none; margin: 0; padding: 0; }
+.PDb-single .description { font-family: Verdana; font-size: 11px; padding: 10px 0; text-transform: none; }
+.PDb-single .product_name, .PDb-single .designer { display: inline-block;font-size: 12px; padding-right: 1.5em; text-transform: uppercase; }
+.PDb-single .designer { border-right: 1px solid black; }
+.PDb-single .product_name { margin-left: 1.5em; }
+.PDb-single .product-row { margin: 0 0 15px 0; overflow: hidden; }
+.PDb-single .product-row .materials { float: left;  font-size: 12px; text-transform: none; width: 135px; }
+.PDb-single .product-row .size{ float: right; font-size: 12px; text-transform: none; }
+.PDb-single .product-row .retail_price,.PDb-single .product-row .inquiries { float: left; font-size: 15px; }
+.PDb-single .product-row .inquiries input, .PDb-single .product-row .tearsheet input {background: none; border: medium none;}
+.PDb-single .product-row .retail_price { margin: 0 20px 0 0 }
+.PDb-single .product-row .tearsheet { float: right; font-size: 15px; } 
+.PDb-single .post-sharing { overflow: hidden; }
+.PDb-single .post-sharing ul { list-style: none; margin: 0; padding: 0;}
+.PDb-single .post-sharing ul li { float: left; margin: 0 5px 0 0;}
+.PDb-single .post-sharing ul li iframe { width: 82px!important; }
+.PDb-single .post-sharing ul li #product-email {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+) #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2e2e2));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e2e2e2 100%);
+    border: 1px solid #ccc; border-radius: 3px; display: block; font-family: 'helvetica neue', helvetica; font-size: 9px; padding: 3px 3px; position: relative; text-shadow: 1px 1px #fff;
+  }
+
+
+#product-content .products-database { overflow: hidden; }
+#product-content .products-database .gallery-item {float: left;}
+#product-content .products-database .gallery-item img { height: 160px; width: 160px;}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hide-on-iphone { display: none; visibility: hidden; }
+.show-on-iphone { display: block; }
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 460px) {
+  body { background-image: url('../images/layout/horz1.png'); }
+  body { background-position: center top; background-repeat: repeat-y;}
+  body.parent-pageid-6, body.blog, body.single, body.category { background-image: url('../images/layout/horz2.jpg'); }
+
+  #container { margin: 0 auto; width: 480px; }
+  
+  header { margin: 0 auto; }
+
+  .single #container, .page-id-22 #container { min-height: 0; } 
+
+  .main .wrapper-landscape { margin: 0 auto; width: 320px; }
+
+/*  .news .widget_vr { width: 300px; }
+  .news .widget_vr #email_address { padding: 4px 56px 4px 3px!important; }
+  .news .widget_vr #vr_submit { width: 55px!important;}*/
+
+/*  .single .news, .page-id-22 .craft { min-height: 0;  } 
+  .single .news article { overflow-x: scroll; width: 460px; }
+  .single .news .gallery { width: 480px; }*/
+
+/*  .single .news .entry-content iframe:not(.twitter-share-button){ height: initial; width: 100%;}*/
+
+
+  .page-id-8, .parent-pageid-8 { background-image: url('../images/layout/horz3.jpg'); }
+
+/*  .product .agenda-top { padding: 20px 0 0 135px; }
+  .product .content { margin: 16px 0 0 0; overflow-x: scroll; }
+  .product .gallery, .product .products-database { width: 480px; }
+  .product .products-database { overflow: hidden; }*/
+
+  .page-id-22 { background-position: center top; background-size: 100% 100%;  }
+  .page-id-22 .main { min-height: 438px;}
+  
+  .page-id-15 #container, .parent-pageid-15 #container { width: 480px; }
+  .page-id-15 .main, .parent-pageid-15 .main { background: url("../images/layout/agenda-block.png") repeat-x scroll 0 0 transparent; }
+  .page-id-15 .agenda-top, .parent-pageid-15 .agenda-top { background: none; }
+  .page-id-15 .landscape-white, .parent-pageid-15 .landscape-white { background-color: #FFFFFF; }
+
+  .page-id-15, .parent-pageid-15, body.page-id-40 { background-image: url('../images/layout/horz5.jpg');  }
+/*  .page-id-15 .gallery-size-iphone-about-thumbnail, .parent-pageid-15 .gallery-size-iphone-about-thumbnail { padding: 0 0 0 80px; }*/
+
+  .iosSlider { width: 480px; }
+  .iosSlider .slider .slide { width: 480px; }
+
+  .slide { background-position: left top; background-size: 300% 100%; }
+  .slide.item-3, .slide.item-6, .slide.item-9 { background-position: -481px top; }
+  .slide.item-4, .slide.item-7, .slide.item-11 { background-position: -962px top; }
+}
+
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}

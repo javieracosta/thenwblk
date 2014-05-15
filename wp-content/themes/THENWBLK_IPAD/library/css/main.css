@@ -1,0 +1,600 @@
+ab/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    background-position: center top;
+    /*width:768px;*/
+    margin:0 auto;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+a {
+    color: #00e;
+}
+
+a:visited {
+    color: #551a8b;
+}
+
+a:hover {
+    color: #06e;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+@font-face {
+    font-family: 'dinmittelschriftregular';
+    src: url('fonts/dinmittelschrift-regular.ttf-webfont.eot');
+    src: url('fonts/dinmittelschrift-regular.ttf-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.woff') format('woff'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.ttf') format('truetype'),
+         url('fonts/dinmittelschrift-regular.ttf-webfont.svg#dinmittelschriftregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Global 
+----------------------------------------------------------------------- */
+    
+body { background: url("../images/layout/default.jpg") no-repeat center top scroll transparent; font-family: "dinmittelschriftregular"; text-transform: uppercase;}
+body.parent-pageid-6, body.blog, body.single { background-image: url("../images/layout/body-2.jpg"); background-repeat: repeat-y;background-position: center top; }
+
+/*body.blog, body.single { background-attachment: fixed; }*/
+
+#container { margin: 0 auto; min-height: 973px; width: 768px;  }
+#container a { color: #000000; text-decoration: none; }
+#container .current-menu-item a { text-decoration: underline; }
+
+.main {min-height: 480px; }
+
+.parent-pageid-6 .main { min-height: 470px; }
+
+h1 { font-size: 36px; margin: 0; text-decoration: underline; }
+
+header { height: 124px; overflow: hidden;}
+header .logo { float: left; height: 125px; margin-left: 124px; width: 125px;}
+header .bars { background: url("../images/layout/bars.png") no-repeat scroll left top transparent; float: left; height: 125px; margin-left: 120px; width: 125px;}
+
+.menu { float: right;font-size: 25px;line-height: 1.0;list-style: none;margin: 0 36px 0 0;padding: 0;}
+.menu.agenda { font-size: 16px; line-height: 20px; margin: 25px 15px 0 0; text-align: right; }
+.menu.about { margin: 68px 15px 0 0; }
+
+
+.main .menu { margin: 0; }
+.main .menu a { font-size: 21px; margin: 0; }
+.main .menu  li {line-height: 30px;}
+.main .agenda-top { padding: 20px 0 0 80px; }
+.main .agenda-top h1 { font-size: 35px;font-weight: lighter; letter-spacing: -2px;line-height: 45px; }
+/* end Global */
+
+/* Forms */
+input[type=text]:focus,textarea:focus {color: #373737;}
+input[type=text] {  padding: 3px;}
+input#s {background: url(images/search.png) no-repeat 5px 6px;-moz-border-radius: 2px;border-radius: 2px;font-size: 14px;height: 22px;line-height: 1.2em;padding: 4px 10px 4px 28px;}
+input#searchsubmit {display: none;}
+input[type=text],
+input[type=password],
+textarea {background: #fafafa;-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);border: 0;color: #888;}
+textarea {padding-left: 3px;width: 98%;}
+/* end Forms*/
+
+
+
+/* Home page 
+----------------------------------------------------------------------- */
+
+/* end Home page */
+
+
+
+/* Agenda - Mission page 
+----------------------------------------------------------------------- */
+/* Preload all the background images*/
+#preloader {
+  background: url("../images/layout/sprites/mission-2.png") no-repeat fixed -9999px -9999px;
+  background: url("../images/layout/sprites/mission-3.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-4.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-5.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-6.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-7.png") no-repeat fixed -9999px -9999px,
+              url("../images/layout/sprites/mission-8.png") no-repeat fixed -9999px -9999px,
+  }
+
+.arrow { background: url("../images/layout/arrow.png") no-repeat scroll 0 0 transparent; bottom: 100px; height: 41px; position: absolute; right: 100px; width: 72px;}
+.arrow.white { background-image: url("../images/layout/arrow-white.png");}
+
+/* Required Slider styles */
+.iosSlider { position: relative;top: 0;left: 0;overflow: visible;width: 768px; height: 849px;}
+.iosSlider .slider {width: 100%;height: 100%;}
+.iosSlider .slider .slide {float: left;height: 849px; position: relative; width: 768px; }
+
+/* setting up bg position */
+.slide.item-1, .slide.item-10 { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent; }
+
+
+.slide.item-1 p { font-size: 50px;letter-spacing: -3px;padding: 0 119px;text-align: justify;}
+
+.slide.item-2 { background-image: url("../images/layout/mission-2.jpg"); }
+.slide.item-2 p { color: #FFFFFF; font-size: 28px; padding: 100px 0; text-align: center;}
+
+.slide.item-3 { background-image: url("../images/layout/mission-3.jpg"); }
+.slide.item-3 p { color: #FFFFFF;font-size: 18px;padding: 55px 122px 0;text-align: justify;}
+
+.slide.item-4 { background-image: url("../images/layout/mission-4.png"); }
+.slide.item-4 .left { float: left; width: 492px; }
+.slide.item-4 .left p { color: #FFFFFF;font-size: 30px; margin: 94px 0 0;text-align: center;}
+.slide.item-4 .right { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent;float: left;height: 849px; width: 275px;}
+.slide.item-4 .right .wrapper { padding: 94px 19px 0;}
+.slide.item-4 .right p { color: #000000;font-family: Verdana;font-size: 14px;margin: 0 0 10px 0;text-align: justify;text-transform: none;}
+
+.slide.item-5 { background-image: url("../images/layout/mission-5.jpg"); }
+.slide.item-5 .left { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent; float: left; height: 849px; width: 370px;}
+.slide.item-5 .left h2 { font-size: 46px; margin: 370px 0 0; text-align: center;}
+.slide.item-5 .left p {font-family: Verdana;font-size: 14px;margin: 6px 0 0 0;line-height: 24px;padding: 0 20px;text-align: justify;text-transform: none;}
+
+.slide.item-6 { background-image: url("../images/layout/mission-6.png"); }
+.slide.item-6 p { color: #FFFFFF;font-size: 24px;line-height: 25px;padding: 278px 38px 0 62px;text-align: justify;}
+
+.slide.item-7 { background-image: url("../images/layout/mission-7.png"); }
+.slide.item-7 .left { float: left; margin: 230px 0 0 30px; }
+.slide.item-7 p { font-size: 15px;margin-bottom: 44px;text-align: left;}
+
+.slide.item-8 { background-image: url("../images/layout/mission-8.jpg"); }
+.slide.item-8 .right { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent; float: right; height: 849px; width: 400px; }
+.slide.item-8 .right .wrapper { padding: 0 65px 0 140px;}
+.slide.item-8 .right h2 { font-size: 12px; margin: 55px 0 0;}
+.slide.item-8 .right p { font-family: Verdana; font-size: 12px; text-align: justify; text-transform: none; }
+
+
+/* Agenda - News page 
+----------------------------------------------------------------------- */
+.news .content-wrapper article img, .news .content-wrapper article iframe:not(.twitter-share-button) { height: auto; width : 100%!important; }
+
+
+.news { background: url("../images/layout/agenda-block.png") repeat scroll 0 0 transparent; overflow: hidden; }
+
+.news ul {margin: 0; }
+
+.news .left {float: left; height: 100%; width: 245px; }
+.news .left .wrapper { padding: 125px 25px 0; }
+
+.news .widget_vr { margin: 0; }
+.news .widget_vr .widget-title { font-size: 16px;font-weight: normal; margin: 0; }
+
+.news .widget_vr #vr_submit { font-size: 10px!important; font-weight: bold!important;}
+.news .widget_vr #email_address { font-size: 10px!important; padding: 4px 3px!important; text-indent: 5px;}
+
+.news .content {margin: 16px 60px 0 80px;}
+
+
+.news .news-categories h3 { cursor: pointer; font-size: 16px; font-weight: normal; }
+.news .news-categories .archive-category { display: none; }
+
+.news .press-items { display: none; list-style: none; margin: 0 0 0 0; padding: 0; text-transform: none; }
+.news .press-items a { font-family: Verdana; font-size: 11px;}
+.news .press-items li { line-height: 15px;padding: 0 0 10px 12px;}
+
+
+.news .gallery-item { margin: 0; }
+
+.news h1 { font-size: 12px; font-weight: normal;margin: 0; padding: 0 30px 20px; text-decoration: none;}
+/*.news img { height: 160px; margin: auto; width: 160px;}*/
+.news p{ font-family: Verdana;font-size: 10px; line-height: 22px;margin: 0;padding: 0 28px;text-align: justify;text-transform: none;}
+.news a{ font-family: "dinmittelschriftregular";}
+
+.news .content-wrapper { background-image: none;background-color: #FFFFFF; float: left; height: auto; min-height: 849px; overflow: hidden; width: 523px; }
+.news .content-wrapper article { overflow: hidden; padding: 0 0 25px 0; }
+.news .content-wrapper .images.left { text-align: left; width: auto; }
+.news .content-wrapper article:first-child .entry-content  { margin: 120px 0 0 0; }
+.news .content-wrapper .entry-content  { float: right; width: 275px; }
+.news .content-wrapper .entry-content .gallery { display: none; visibility: hidden; }
+.news .content-wrapper hr {  border-top: none; border-bottom-color: #DDD; margin: 0 0 25px 0;  }
+
+.news .content-wrapper .social-buttons {padding: 15px 28px 0;}
+
+.blog .news h2 { font-size: 12px; font-weight: normal;margin: 0; padding: 0 30px 20px; text-decoration: none;}
+
+.news .content-wrapper .navigation a { font-size: 12px;}
+.news .content-wrapper .navigation .prev { float: left; margin: 0 0 0 10px; width: 200px; }
+.news .content-wrapper .navigation .next { float: right; text-align: right; width: 200px; }
+
+/*.single .news .iosSlider { height: 100%;}*/
+/* end Agenda - News page */
+
+
+/* About page 
+----------------------------------------------------------------------- */
+.page-id-15, .parent-pageid-15 { background-image: url("../images/layout/body-3.jpg"); }
+ body.page-id-40 { background-image: url("../images/layout/mission-bg.jpg"); }
+ 
+.page-id-15 .main, 
+.page-id-15 .main .content-wrapper,
+.parent-pageid-15 .main .content-wrapper { overflow: hidden; }
+
+.page-id-15 .left,
+.parent-pageid-15 .left { float: left; width: 244px; }
+
+.page-id-15 .left .menu,
+.parent-pageid-15 .left .menu { padding: 95px 30px 0 0; text-align: right; }
+
+.page-id-15 .content-wrapper .left,
+.parent-pageid-15 .content-wrapper .left, { width: 248px; }
+
+.page-id-15 .content-wrapper .left .gallery dl,
+.parent-pageid-15 .content-wrapper .left .gallery dl{ margin: 0; }
+
+.page-id-15 .content-wrapper .content,
+.parent-pageid-15 .content-wrapper .content { float: right; width: 275px; }
+
+.page-id-15 .content-wrapper .content .gallery,
+.parent-pageid-15 .content-wrapper .content .gallery { display: none; visibility: hidden; }
+
+.page-id-15 .content-wrapper .content .about-text,
+.parent-pageid-15 .content-wrapper .content .about-text { padding: 95px 40px 0; }
+
+.page-id-15 .content-wrapper .content p,
+.parent-pageid-15 .content-wrapper .content { font-size: 14px; line-height: 26px;  text-transform: none; }
+
+.page-id-42 .content-wrapper .content { height: 845px;overflow-y: scroll; }
+
+.page-id-15 .content-wrapper .content p span,
+.parent-pageid-15 .content-wrapper .content p span { font-weight: bold; }
+
+
+.page-id-15 .content .show-on-iphone, { overflow: hidden; }
+.page-id-15 .content .social-links { background: url("../images/layout/sprites/icon-sprite.png") no-repeat scroll 0 0 transparent; float: left; height: 25px; margin: 8px 10px 0 0; width: 23px;}
+.page-id-15 .content .fb { height: 22px; width: 12px; }
+.page-id-15 .content .tw { background-position: -82px 0; }
+.page-id-15 .content .pn { background-position: -22px 0; }
+.page-id-15 .content .ig { background-position: -52px 0; }
+
+
+.parent-pageid-15 h3 {font-size: 15px;}
+.parent-pageid-15 .content {font-family: Verdana; font-size: 11px; line-height: 23px; text-transform: none;}
+.parent-pageid-15 .content #theteam {font-weight: bold;  padding: 10px 0;}
+
+.page-id-44 #container { min-height: initial; }
+.page-id-44 #container .main { min-height: initial; }
+.page-id-44 .main .content-wrapper { background-color: #FFFFFF; height: 805px; }
+.page-id-44 .main .content-wrapper .content { width: 520px; }
+.page-id-44 .main .content-wrapper .content #text-17 { padding: 20px; text-align: justify; }
+/* end About page */
+
+
+
+/* Craft page 
+----------------------------------------------------------------------- */
+.page-id-22 { background-image: url("../images/layout/body-5.jpg"); }
+.page-id-22 .craft { text-align: justify; width: 365px; }
+.page-id-22 .craft .widget { padding: 0 25px; margin: 95px 0 0 0; }
+.page-id-22 h3 { font-size: 22px; font-weight: normal; margin: 0; text-align: left; }
+.page-id-22 p { font-family: Verdana; font-size: 17px; text-transform: none; }
+/* end Craft page*/
+
+
+
+/* Products page 
+----------------------------------------------------------------------- */
+.page-id-8, .parent-pageid-8, .page-template-gallery-product-php { background-image: url("../images/layout/body-4.jpg"); background-attachment: fixed; }
+
+.main.product { min-height: 850px; }
+.product { background: url("../images/layout/agenda-block.png") repeat fixed 0 0 transparent; overflow: hidden; }
+
+.product aside { float: left; width: 124px; }
+.product aside.wide { width: 190px; }
+.product aside .wrapper { padding: 120px 12px 0 }
+.product .menu {float: none;}
+.product .menu li { line-height: 24px; text-align: right; }
+.product .menu a {font-size: 17px;}
+.product .menu-profiles-container li, .product .menu-made-by-container li{ line-height: 15px; padding-bottom: 5px; }
+
+.product .content { float: left; overflow-x: auto; width: 642px;}
+.product .content.wide { width: 575px; }
+.product .gallery, .product .products-database { overflow: hidden; width: 744px; }
+
+.product .gallery .gallery-item { float: left;margin: 0; }
+.product .pagination { display: none; visibility: hidden; }
+.product br {display: none;}
+
+#container .product .current-menu-item .sub-menu a { text-decoration: none;}
+.product .current-menu-item .sub-menu {display: block;}
+.product .current-page-ancestor .sub-menu {display: block;}
+
+.product .sub-menu {display: none; list-style: none; margin: 0 0 5px; padding: 0;}
+.product .sub-menu li {line-height: 10px;}
+.product .sub-menu li a { font-size: 11px;}
+
+.product .content.product-content { overflow: hidden; position: relative; }
+
+.product-content { background-color: #FFFFFF; }
+
+
+.product-content .PDb-single{ padding: 95px 0 0 125px; }
+
+
+.product-content #prevProduct, .product-content #nextProduct { background-repeat: no-repeat; background-size: 40% 40%; height: 40px; position: absolute; top: 65px; width: 61px; }
+.product-content #prevProduct { background-image: url('http://thenwblk.com/wp-content/themes/THENWBLK/images/black_arrow_left.png'); left: 120px; }
+.product-content #nextProduct { background-image: url('http://thenwblk.com/wp-content/themes/THENWBLK/images/black_arrow_right.png'); left: 455px; }
+
+.products-database .gallery-item { float: left; }
+.products-database .gallery-item .attachment-medium { height: auto; width: 230px; }
+
+
+#galleria  { height: 600px;}
+#galleria img, .PDb-single .display_category, .PDb-single .options,  .PDb-single .lead_time { display: none; visibility: none; }
+#galleria img:first-child {display: block; width: 100%!important; }
+#galleria .galleria-thumbnails-container { left: auto; right: auto; top: 4%; }
+
+
+.PDb-single #product-text { width: 355px; }
+.PDb-single .product-list { list-style: none; margin: 0; padding: 0; }
+.PDb-single .description { font-family: Verdana; font-size: 12px; padding: 10px 0; text-transform: none; }
+.PDb-single .product_name, .PDb-single .designer { display: inline-block;font-size: 12px; padding-right: 1.5em; text-transform: uppercase; }
+.PDb-single .designer { border-right: 1px solid black; }
+.PDb-single .product_name { margin-left: 1.5em; }
+.PDb-single .product-row { margin: 10px 0 15px 0; overflow: hidden; }
+.PDb-single .product-row .materials { float: left;  font-size: 12px; text-transform: none; width: 156px; }
+.PDb-single .product-row .size{ float: right; font-size: 12px; text-align: right; text-transform: none; width: 165px; }
+.PDb-single .product-row .retail_price,.PDb-single .product-row .inquiries { float: left; font-size: 15px; }
+.PDb-single .product-row .inquiries input, .PDb-single .product-row .tearsheet input {background: none; border: medium none;}
+.PDb-single .product-row .retail_price { margin: 0 20px 0 0 }
+.PDb-single .product-row .tearsheet { float: right; font-size: 15px; } 
+.PDb-single .post-sharing { overflow: hidden; }
+.PDb-single .post-sharing ul { list-style: none; margin: 0; padding: 0;}
+.PDb-single .post-sharing ul li { float: left; line-height: 15px; margin: 0 5px 0 0;}
+.PDb-single .post-sharing ul li iframe { width: 82px!important; }
+.PDb-single .post-sharing ul li #product-email {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+) #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e2e2e2));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#e2e2e2 100%);
+    border: 1px solid #ccc; border-radius: 3px; font-family: 'helvetica neue', helvetica; font-size: 9px; padding: 3px 3px; position: relative; text-shadow: 1px 1px #fff;
+  }
+
+
+#product-content .products-database .gallery-item {float: left;}
+#product-content .products-database .gallery-item img { height: 242px; width: 242px;}
+
+.product #menu-profiles-header, .product #menu-categories-header { cursor: pointer; line-height: 28px; text-align: right;  }
+.product #menu-categories-header, .product .menu-profiles-container, .product .menu-made-by-container { display: none; }
+.product.designers #menu-categories-header, .product.designers .menu-profiles-container, .product.designers .menu-made-by-container { display: block; }
+.product.designers #menu-profiles-header, .product.designers .menu-product-container { display: none; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hide-on-ipad { display: none; visibility: hidden; }
+.show-on-ipad { display: block; }
+
+/* Prevent callout */
+
+.nocallout {
+    -webkit-touch-callout: none;
+}
+
+.pressed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+
+textarea[contenteditable] {
+    -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+
+.gifhidden {
+    position: absolute;
+    left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: 0;
+    direction: ltr;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    text-indent: -999em;
+}
+
+.ir br {
+    display: none;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/**
+ * Clearfix helper
+ * Used to contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  body { background-image: url('../images/layout/horz1.jpg'); width: 1024px; }
+  #container { min-height: 768px; width: auto;  }
+  
+  header { margin: auto; width: 768px; }
+  header .bars { margin-left: 78px; }
+  header .menu { margin: 0 130px 0 0; }
+
+  /*  Agenda  */
+  body.parent-pageid-6, body.blog, body.single { background-image: url('../images/layout/horz2.jpg'); }
+  .news .left { width: 252px; }
+  .news .content-wrapper { min-height: 644px; width: 772px; }
+  .news .content-wrapper .entry-content { width: 524px; }
+
+  .news .content-wrapper article iframe:not(.twitter-share-button) { height: 280px; }
+
+  /* Products */
+  .page-id-8, .parent-pageid-8, .page-template-gallery-product-php { background-image: url('../images/layout/horz3.jpg'); }
+  .main.product { min-height: 740px; }
+  .product aside, .product aside.wide { width: 180px; }
+  .product .content, .product .content.wide { width: 844px; }
+  .product .gallery, .product .products-database { width: 992px; }
+
+  .PDb-single #product-text { width: 700px;}
+  .product-content #nextProduct {left: auto; right: 0; }
+
+
+  /* Craft */
+  .page-id-22 { background-size: 100% 972px; }
+  .page-id-22 .craft { width: 485px; }
+
+  /* About */
+  .page-id-15, .parent-pageid-15, body.page-id-40 { background-image: url('../images/layout/horz5.jpg'); background-repeat: repeat-y; }
+  .page-id-15 .main .content-wrapper, .parent-pageid-15 .main .content-wrapper { background-color: #FFFFFF; }
+  .page-id-15 .content-wrapper .content, .parent-pageid-15 .content-wrapper .content { width: 515px; }
+  .page-id-15 .left, .parent-pageid-15 .left { background-image: url('../images/layout/agenda-block.png'); height: 748px; width: 254px; }
+  .parent-pageid-15 .content-wrapper .left { height: auto; }
+  .page-id-44 .main .content-wrapper .content { float: left; width: 600px; }
+  .page-id-42 .content-wrapper .content { height: 730px; }
+
+  body.page-id-40 { background-attachment: fixed; background-size: auto 100%; }
+  .iosSlider { height: 849px; width: 1024px; }
+  .iosSlider .slider .slide { background-position: center center; background-repeat: no-repeat; background-size: 100%; width: 1024px; }
+
+  .slider .slide.item-1 .arrow.ir { bottom: 300px; }
+  .slide.item-3 p { padding: 155px 122px 0;  }
+  .slide.item-4 .left { width: 675px; }
+  .slide.item-4 .right { width: 349px; }
+  .slide.item-5 .left { width: 500px; }
+
+  .slide.item-8 .right { width: 450px; }
+  .slide.item-8 .right .wrapper { padding: 0 65px 0 80px; }
+  
+}
+
+@media only screen and (min-width: 800px) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
