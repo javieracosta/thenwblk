@@ -8,3 +8,4 @@ profile
 .settings/org.eclipse.php.core.prefs
 *.sublime-project
 *.sublime-workspace
+wp-content/uploads
