@@ -80,10 +80,10 @@ $table_prefix  = 'wp_';
  */
 define('WPLANG', '');
 
-@ini_set('log_errors','On');
+@ini_set('log_errors','Off');
 @ini_set('display_errors','Off');
-define('WP_DEBUG', true);
-define('WP_DEBUG_LOG', true);
+define('WP_DEBUG', false);
+define('WP_DEBUG_LOG', false);
 define('WP_DEBUG_DISPLAY', false);
 
 
