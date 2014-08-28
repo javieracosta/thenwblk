@@ -74,7 +74,7 @@ function portfolio_slideshow_shortcode( $atts ) {
 	
 	$ps_nav = '<div id="slideshow-nav'.$i.'" class="slideshow-nav">';
 
-	$ps_nav .='<a class="pause" style="display:none" href="javascript:void(0);">Pause</a><a class="play" href="javascript:void(0);">Play</a><a class="restart" style="display:none" href="javascript: void(0);">Play</a><a class="slideshow-prev" href="javascript: void(0);"></a><span class="sep">|</span><a class="slideshow-next" href="javascript: void(0);"></a><span class="slideshow-info' . $i . ' slideshow-info"></span>';
+	$ps_nav .='<a class="pause" style="display:none" href="javascript:void(0);">Pause</a><a class="play" href="javascript:void(0);">Play</a><a class="restart" style="display:none" href="javascript: void(0);">Play</a><a class="slideshow-prev" href="javascript: void(0);">Prev</a><span class="sep">|</span><a class="slideshow-next" href="javascript: void(0);">Next</a><span class="slideshow-info' . $i . ' slideshow-info"></span>';
 					
 	$ps_nav .= '</div><!-- .slideshow-nav-->
 	';
@@ -228,17 +228,11 @@ function portfolio_slideshow_shortcode( $atts ) {
 			if ( ! $alttext ) {
 				$alttext = $attachment->post_title;
 			}
-			
-			$img =  wp_get_attachment_image_src( $attachment->ID, $size );
 				
 			$slideshow .= '<div class="';
 			if ( $slideID != "0" ) { $slideshow .= "not-first "; }
-			$slideshow .= 'slideshow-next slideshow-content"'; 
-			$slideshow .= ' style="background: url('. $img[0] . ') no-repeat center center; 
-				-webkit-background-size: cover;
-				-moz-background-size: cover;
-				-o-background-size: cover;
-				background-size: cover;height:100%">
+			$slideshow .= 'slideshow-next slideshow-content'; 
+			$slideshow .= '">
 			';
 				 
 			switch ( $click ) {
@@ -263,7 +257,7 @@ if ( $loop == "false" && $ps_count - 1 != $slideID || $loop != "false" ) { $slid
 					 
 			/* Otherwise it's just one of the WP defaults */
 			
-			/*$img =  wp_get_attachment_image_src( $attachment->ID, $size );
+			$img =  wp_get_attachment_image_src( $attachment->ID, $size );
 					
 			$slideshow .= '<img class="psp-active" data-img="' . $img[0] . '"'; 
 				
@@ -274,7 +268,7 @@ if ( $loop == "false" && $ps_count - 1 != $slideID || $loop != "false" ) { $slid
 			}
 			//include the src attribute for the first slide only
 				
-			$slideshow .= ' height="' . $img[2] . '" width="' . $img[1] . '" alt="' . $alttext . '" /><noscript><img src="' . $img[0] . '" height="' . $img[2] . '" width="' . $img[1] . '" alt="' . $alttext . '" /></noscript>';*/
+			$slideshow .= ' height="' . $img[2] . '" width="' . $img[1] . '" alt="' . $alttext . '" /><noscript><img src="' . $img[0] . '" height="' . $img[2] . '" width="' . $img[1] . '" alt="' . $alttext . '" /></noscript>';
 									
 			
 /*

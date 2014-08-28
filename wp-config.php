@@ -15,8 +15,8 @@
  */
 // development
 
-    define('WP_HOME','http://thenwblk.com');
-    define('WP_SITEURL','http://thenwblk.com');
+    define('WP_HOME','http://qa.thenwblk.com');
+    define('WP_SITEURL','http://qa.thenwblk.com');
 
     // ** MySQL settings - You can get this info from your web host ** //
     /** The name of the database for WordPress */
@@ -27,9 +27,9 @@ if (isset($_SERVER['PLATFORM']) && $_SERVER['PLATFORM'] == 'PAGODABOX') {
     define('DB_HOST', $_SERVER['DB1_HOST'] . ':' . $_SERVER['DB1_PORT']);
 }
 else {
-    define('DB_NAME', 'thenwblk-dev');
+    define('DB_NAME', 'thenwblx_new_dev');
     define('DB_USER', 'root');
-    define('DB_PASSWORD', 'root');
+    define('DB_PASSWORD', 'deployaqa');
     define('DB_HOST', 'localhost');
 }
 /** MySQL hostname */
@@ -92,6 +92,7 @@ define('WP_DEBUG_DISPLAY', false);
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
+define('FS_METHOD','direct');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

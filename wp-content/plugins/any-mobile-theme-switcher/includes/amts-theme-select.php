@@ -9,9 +9,10 @@ $operaTheme			= get_option('opera_theme');
 $palmTheme			= get_option('parm_os_theme');
 $otherTheme			= get_option('other_theme');	
 
-$themeList 			= get_themes();
+$themeList 			= custom_get_themelist();
 $themeNames 		= array_keys($themeList); 
-$defaultTheme 		= get_current_theme();
+$defaultTheme 		= wp_get_theme();
+$defaultTheme 		= $defaultTheme->Name;
 natcasesort($themeNames);
 ?>
 
@@ -147,7 +148,7 @@ natcasesort($themeNames);
         </tr>
         
         <tr valign="top">
-        <th scope="row">Parm Os Theme</th>
+        <th scope="row">Palm Os Theme</th>
         <td>
         	<select name="parm_os_theme">
 			 <?php 
