@@ -9,3 +9,4 @@ profile
 *.sublime-project
 *.sublime-workspace
 wp-content/uploads
+/nbproject
