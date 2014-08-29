@@ -15,8 +15,8 @@
  */
 // development
 
-    define('WP_HOME','http://qa.thenwblk.com');
-    define('WP_SITEURL','http://qa.thenwblk.com');
+    define('WP_HOME','http://qathenwblk.gopagoda.com/');
+    define('WP_SITEURL','http://qathenwblk.gopagoda.com/');
 
     // ** MySQL settings - You can get this info from your web host ** //
     /** The name of the database for WordPress */
