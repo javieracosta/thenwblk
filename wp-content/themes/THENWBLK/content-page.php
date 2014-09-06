@@ -10,7 +10,7 @@
 <style type="text/css">
 		<?php if(is_front_page() ): ?>
 body {
-	background: url(/wp-content/themes/THENWBLK/images/new_landing.png) no-repeat center center fixed; 
+	background: url(/wp-content/themes/THENWBLK/images/new_landing.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
