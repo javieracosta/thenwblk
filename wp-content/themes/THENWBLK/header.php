@@ -107,7 +107,7 @@ WebFontConfig = { fontdeck: { id: '23344' } };
 <style type="text/css">
 <?php if(is_page_template('furniture.php' || 'product.php' || 'lighting.php' || 'accessories.php' || 'utility.php' || 'profiles.php' || 'designers.php' || 'gallery-product.php' || 'gallery-product-designers.php')) : ?>
 body {
-	background: url(<?php bloginfo('template_directory'); ?>/images/background_gallery.png) no-repeat center center fixed; 
+	background: url(<?php bloginfo('template_directory'); ?>/images/background_gallery.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
